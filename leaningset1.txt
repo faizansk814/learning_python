@@ -1,0 +1,42 @@
+1) print("Hello world")
+
+2) a=10 b=3.5 c="John" d=["apple",25,false] isRight=true
+
+3) arr=["apple","orange","banana"]  arr.append("mango") arr.remove("orange") arr.sort()
+
+4) arr=[10, 20, 30, 40]
+   sum=0
+   for num in arr:
+    sum+=num
+   p=sum/len(arr)
+
+5)x=Python
+bag=""
+for i in range(len(x)-1,-1,-1):
+    bag+=x[i]
+print(bag)
+
+6)x="Hello"
+count=0
+for str in x:
+    if(str=="a" or str=="e" or str=="i" or str=="u" or str=="o"):
+        count+=1
+print("Number of Vowels:",count)
+
+7)
+def primeCheck(num):
+    count = 0
+    for i in range(2, num + 1):
+        if (num % i) == 0:
+            count += 1
+
+    if (count == 1):
+        return True
+    else:
+        return False
+
+x = primeCheck(13)
+if (x):
+    print("It's a prime number")
+else:
+    print("Not a prime number")
