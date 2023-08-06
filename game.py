@@ -18,7 +18,7 @@ while game:
             print(f"computer choice:- {compt}")
             print("You won")
             usercount+=1
-        elif user=="paper" and compt=="stone":
+        elif user=="paper" and compt=="rock":
             print(f"computer choice:- {compt}")
             print("You won")
             usercount+=1

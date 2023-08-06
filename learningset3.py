@@ -52,3 +52,37 @@ for i in range(0,len(arr)):
     arr[i]=arr[min]
     arr[min]=temp
 print(arr)
+
+# FizzBuzz
+# for i in range(1,101):
+#     if(i%5==0 and i%3==0):
+#         print("FizzBuzz",end=" ")
+#     elif(i%5==0):
+#         print("Buzz",end=" ")
+#     elif(i%3==0):
+#         print("Fizz",end=" ")
+#     else:
+#         print(i,end=" ")
+
+# Reading and writing file
+# content=""
+# with open("a.txt","r") as file:
+#     content=file.read()
+#     print(content)
+# a=content.split(" ")
+
+# with open("b.txt","w") as file:
+#     file.write(f"Number of words {len(a)}")
+
+
+# Division error
+
+def func(a,b):
+    try:
+        res=a/b
+        return res
+    except ZeroDivisionError:
+        return "Zero is not divided"
+print(func(5,5))
+
+
