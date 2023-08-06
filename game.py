@@ -1,13 +1,11 @@
 import random
-tup=("stone","paper","scissor")
-
-compt=random.choice(tup)
+tup=("rock","paper","scissor")
 game=True
 usercount=0
 comptcount=0
 tie=0
 while game:
-    
+    compt=random.choice(tup)
     user=input("Enter your move:")    
     if user not in tup:
         print("Enter valide move")
