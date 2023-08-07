@@ -67,7 +67,7 @@ def Remove():
         with open("invent.json", "w") as file:
             json.dump(arr, file)
 
-def SellSnack():
+def SellSnack(sum):
     id = int(input("Enter snack id to sell:"))
     foodname=input("Enter foodname:")
     name=input("Enter your name:")
@@ -88,6 +88,7 @@ def SellSnack():
     print("--------------------------")
     print("Snacks selled succesfully")
     print("--------------------------")
+    return sum
 
 
 def UpdateStatus():
@@ -143,7 +144,7 @@ while flag:
     elif userinput == 4:
         Remove()
     elif userinput == 5:
-        SellSnack()
+        sum+=SellSnack(sum)
     elif userinput == 6:
         print("--------------------------")
         print(f"Total sale:- {sum}")
