@@ -1,0 +1,28 @@
+1:-SELECT * FROM Rides ORDER BY fare DESC LIMIT 1; 
+1:-SELECT * FROM Rides ORDER BY fare ASC LIMIT 1; 
+
+2:-SELECT driver_id, AVG(fare) AS avg_fare, AVG(distance) AS avg_distance FROM Rides GROUP BY driver_id;
+
+3:-SELECT driver_id, COUNT(*) AS ride_countFROM Rides GROUP BY driver_id HAVING ride_count > 5;
+
+4:-SELECT D.name FROM Rides R JOIN Drivers D ON R.driver_id = D.driver_id ORDER BY R.fare DESC
+LIMIT 1;
+
+5:-SELECT driver_id, SUM(fare) AS total_earnings FROM Rides GROUP BY driver_id ORDER BY total_earnings DESC LIMIT 3;
+
+6:-SELECT * FROM Rides WHERE ride_date >= DATE_SUB(CURRENT_DATE, INTERVAL 7 DAY);
+
+7:-SELECT * FROM Rides WHERE end_location IS NULL;
+
+8:-SELECT ride_id, fare / distance AS fare_per_mile FROM Rides ORDER BY fare_per_mile DESC;
+
+9:-SELECT R.*, D.name AS driver_name, P.name AS passenger_name FROM Rides R JOIN Drivers D ON R.driver_id = D.driver_id JOIN Passengers P ON R.passenger_id = P.passenger_id;
+
+10:-ALTER TABLE Rides ADD COLUMN tip DECIMAL(10, 2);
+
+
+
+
+
+
+

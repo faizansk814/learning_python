@@ -1,0 +1,32 @@
+1:- CREATE TABLE Restaurants (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    cuisine_type VARCHAR(100),
+    location VARCHAR(255),
+    average_rating DECIMAL(3,2),
+    delivery_available BOOLEAN
+);
+
+
+2:- INSERT INTO Restaurants (id, name, cuisine_type, location, average_rating, delivery_available) VALUES
+(1, 'Cafe Delight', 'Cafe', '123 Main Street', 4.5, true),
+(2, 'Pizza Paradise', 'Italian', '456 Elm Avenue', 4.2, true),
+(3, 'Spice Junction', 'Indian', '789 Oak Boulevard', 4.0, true)
+
+3:- SELECT * FROM Restaurants ORDER BY average_rating DESC
+
+4:- SELECT * FROM Restaurants WHERE delivery_available = true AND average_rating > 4
+
+
+5:-SELECT * from Restaurants WHERE cuisine_type = NULL
+
+6:-SELECT COUNT(*) FROM Restaurants where delivery_available = true
+
+
+7:- SELECT * from Restaurants WHERE location = "New York"
+
+8:-SELECT AVG(average_rating) AS average_average_rating FROM Restaurants;
+
+9:-SELECT * FROM Restaurants ORDER BY average_rating DESC LIMIT 5
+
+10:-DELETE FROM Restaurants WHERE id = 3;

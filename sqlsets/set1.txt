@@ -1,0 +1,26 @@
+1 :- SELECT COUNT(*) FROM Customers
+
+2 :- SELECT * FROM Customers
+
+3 :- DELETE FROM Customers WHERE id = 2
+
+4 :- SELECT * FROM Customers ORDER BY id ASC LIMIT 3;
+
+5 :- SELECT * FROM Customers ORDER BY name ASC;
+
+6 :- SELECT * FROM Customers ORDER BY name DESC;
+
+7 :- SELECT * FROM Customers WHERE name LIKE 'A%';
+
+8 :- SELECT * from Customers WHERE id = 4;
+
+9 :- SELECT name,email from Customers
+
+10 :- 
+INSERT INTO Customers (id, name, email, address, phone_number) VALUES (3 , 'Munnu', 'Munnu@gmail.com', '123 Main St', '123-456-7890');
+INSERT INTO Customers (id, name, email, address, phone_number) VALUES (4 , 'Rakesh', 'rakesh@gmail.com', '123 Main St', '123-456-7890');
+INSERT INTO Customers (id, name, email, address, phone_number) VALUES (5 , 'Dhinchak', 'dhinchak@gmail.com', '123 Main St', '123-456-7890');
+
+11 :- SELECT * FROM Customers WHERE id > 2 AND name LIKE 'B%'
+
+12 :- SELECT * FROM Customers WHERE id < 3 AND name LIKE '%S';
