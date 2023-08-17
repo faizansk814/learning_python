@@ -19,9 +19,10 @@ def weather(req,city):
     
 def Create(req):
     if req.method=="POST":
-        city=req.data.get('city')
-        temperature=req.data.get('temperature')
-        weather=req.data.get('weather')
+        body=json.loads(req.body)
+        city=body.get('city')
+        temperature=body.get('temperature')
+        weather=body.get('weather')
         if city in weather_data:
             return JsonResponse({"data":"City already present"},status=401)
         else:

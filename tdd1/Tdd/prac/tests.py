@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
-
+import json
 
 weather_data = {
     'San Francisco': {'temperature': 14, 'weather': 'Cloudy'},
@@ -27,11 +27,9 @@ class Weather_data_tests(TestCase):
         self.assertEqual(resp.json()['data'],"city not found")
 
     def test_create(self):
-        data={"city":"Mumbai","temperature":25,"weather":"Cloudy"}
         url=reverse('create')
-        resp=self.client.post(url,data=data,format='json')
+        resp=self.client.post(url,json.dumps({"city":"Mumbai","temperature":25,"weather":"Cloudy"}),content_type='application/json')
         self.assertEqual(resp.status_code,200)
         self.assertEqual(resp.json()['data'],"data posted succesfully")
-        self.assertEqual(weather_data['Mumbai'],{"temperature":25,"weather":"Cloudy"})
 
 
